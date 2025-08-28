@@ -1,2 +1,7 @@
-/.idea/
-/.vscode/
+/.idea/inspectionProfiles
+/.idea/.gitignore
+/.idea/Foodler.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/workspace.xml
+/.vscode/extensions.json
