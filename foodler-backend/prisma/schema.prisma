@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id
+  telegramId    String   @unique
+  username      String?
+  firstName     String?
+  isPremium     Boolean  @default(false)
+  dailyUploads  Int      @default(0)
+  lastUploadAt  DateTime?
+  foodLogs      FoodLog[]
+}
+
+model FoodLog {
+  id        String   @id @default(uuid())
+  userId    String
+  timestamp DateTime @default(now())
+  imageUrl  String
+  products  Json
+  totalKcal Float
+  user      User     @relation(fields: [userId], references: [id])
+}

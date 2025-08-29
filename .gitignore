@@ -5,3 +5,6 @@
 /.idea/vcs.xml
 /.idea/workspace.xml
 /.vscode/extensions.json
+node_modules
+foodler-backend/node_modules
+foodler-backend/dist
